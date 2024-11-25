@@ -19,4 +19,12 @@ public class DepartmentService {
 		return this.dao.findAll();
 		//return departments;
 	}
+	
+	public void saveOrUpdate(Department obj) {
+		if(obj.getId() == null) {
+			this.dao.insert(obj);
+		} else {
+			this.dao.update(obj);
+		}
+	}
 }
