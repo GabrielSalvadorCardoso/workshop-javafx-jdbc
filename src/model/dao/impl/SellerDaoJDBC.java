@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,12 +23,7 @@ public class SellerDaoJDBC implements SellerDao {
 	public SellerDaoJDBC(Connection conn) {
 		this.conn = conn;
 	}
-	
-	@Override
-	public void insert(Seller obj) {
-	
-	}
-	/*
+		
 	@Override
 	public void insert(Seller obj) {
 		PreparedStatement st = null;
@@ -66,7 +62,6 @@ public class SellerDaoJDBC implements SellerDao {
 			DB.closeStatement(st);
 		}
 	}
-	*/
 
 	@Override
 	public void update(Seller obj) {
